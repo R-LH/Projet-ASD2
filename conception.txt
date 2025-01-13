@@ -1,0 +1,58 @@
+Rapport de conception
+
+--- Liste élect-émarg ---
+Classe
+# SDA
+créer_liste(out Tableau)
+insérer(in Personne)
+vérifier(in Personne, out booléen)
+# SDC
+-vector<Personne> creer_liste() O(1)
+	Renvoie un vector<string> de taille nulle
+-void inserer(Personne pers) O(log(n)) amorti
+	Insère la personne passée en paramètre
+	Ajout de tous les électeurs puis tri-fusion
+int chercher(Personne pers) O(log(n))
+	Recherche dichotomique sur les caractères
+	Renvoie l'indice dans la liste ordonnée de la chaîne passée en paramètre
+	Utilisée par verifier()
+bool verifier(Personne pers) O(log(n))
+# NOTES
+La recherche se fait en accédant au champ nom de la Personne
+
+--- Élection ---
+Enregistrement
+string nom          - Nom de l'élection
+Personne* candidats - Tableau des candidats
+int* score          - Score de chaque candidat
+
+--- Émargement ---
+Attribut de la classe Personne
+Accessible depuis la liste élect-émarg
+
+--- Durées ---
+Enregistrement
+Dd   - Durée à la table de décharge
+Di   - Durée dans l'isoloir
+Dv   - Durée à la table d'émargement
+Tmax - Temps d'ouverture du bureau
+
+--- Statistiques ---
+Enregistrement
+pb - Probabilité de prendre un bulletin blanc
+pn - Probabilité de rendre un bulletin nul
+dp - Distance maximum entre la sensibilité et un candidat
+
+--- Isoloirs ---
+Classe
+# SDA
+entrer(in Personne, out entier)
+sortir(in entier, out Personne)
+# SDC
+int entrer(Personne pers) O(1)
+	Renvoie le token de l'isoloir dans lequel la personne est entrée
+Personne sortir(int token) O(1)
+	Renvoie la Personne sortie de l'isoloir
+# NOTES
+Tri-tableaux (c.f. Consigne)
+Singleton pour l'ensemble des isoloirs

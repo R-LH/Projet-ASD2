@@ -1,0 +1,2 @@
+main.o: main.cpp Personne.hpp
+Personne.o: Personne.cpp Personne.hpp

@@ -1,0 +1,261 @@
+ELECTION 'Euro 2024'
+    Candidat n°0 : A bic
+    Candidat n°1 : D pol
+    Candidat n°2 : X nel
+
+BUREAU n°266
+LISTE ÉLECTORALE
+    A bic (0)
+    B gad (1)
+    C ann (2)
+    D pol (3)
+    E lam (4)
+    F bul (5)
+    G yap (6)
+    X nel (7)
+    Y rik (8)
+    Z pat (9)
+
+PRÉPARATION DÉCHARGE
+    A bic : 5 bulletins
+    D pol : 5 bulletins
+    X nel : 5 bulletins
+
+OUVERTURE BUREAU n°266
+TMAX = 40
+
+T = 1
+    ENTRÉE
+        A bic entre
+    DÉCHARGE
+        A bic entre
+        A bic prend A bic
+        A bic prend X nel
+        A bic prend BLANC
+T = 2
+T = 3
+T = 4
+    DÉCHARGE
+        A bic sort
+    ENTRÉE
+        B gad entre
+    DÉCHARGE
+        B gad entre
+        B gad prend A bic
+        B gad prend X nel
+        B gad prend BLANC
+    ISOLOIRS
+        A bic entre
+        A bic choisit NUL
+T = 5
+T = 6
+T = 7
+    DÉCHARGE
+        B gad sort
+    ENTRÉE
+        C ann entre
+    DÉCHARGE
+        C ann entre
+        C ann prend A bic
+        C ann prend X nel
+        C ann prend BLANC
+    ISOLOIRS
+        B gad entre
+        B gad choisit BLANC
+T = 8
+T = 9
+T = 10
+    DÉCHARGE
+        C ann sort
+    ENTRÉE
+        D pol entre
+    DÉCHARGE
+        D pol entre
+        D pol prend D pol
+        D pol prend X nel
+        D pol prend BLANC
+    ISOLOIRS
+        A bic sort
+        C ann entre
+        C ann choisit X nel
+    VOTE
+        A bic a voté
+T = 11
+T = 12
+T = 13
+    DÉCHARGE
+        D pol sort
+    ENTRÉE
+        E lam entre
+    DÉCHARGE
+        E lam entre
+        E lam prend X nel
+        E lam prend A bic
+        E lam prend BLANC
+    ISOLOIRS
+        B gad sort
+        D pol entre
+        D pol choisit D pol
+T = 14
+    SORTIE
+        A bic sort
+    VOTE
+        B gad a voté
+T = 15
+T = 16
+    DÉCHARGE
+        E lam sort
+    ENTRÉE
+        F bul entre
+    DÉCHARGE
+        F bul entre
+        F bul prend A bic
+        F bul prend X nel
+        F bul prend BLANC
+    ISOLOIRS
+        C ann sort
+        E lam entre
+        E lam choisit X nel
+T = 17
+T = 18
+    SORTIE
+        B gad sort
+    VOTE
+        C ann a voté
+T = 19
+    DÉCHARGE
+        F bul sort
+    ENTRÉE
+        G yap entre
+    DÉCHARGE
+        G yap entre
+        G yap prend X nel
+        G yap prend A bic
+        G yap prend BLANC
+    ISOLOIRS
+        D pol sort
+        F bul entre
+        F bul choisit X nel
+T = 20
+T = 21
+T = 22
+    DÉCHARGE
+        G yap sort
+    ENTRÉE
+        X nel entre
+    DÉCHARGE
+        X nel entre
+        X nel prend A bic
+        X nel prend X nel
+        X nel prend BLANC
+    ISOLOIRS
+        E lam sort
+        G yap entre
+        G yap choisit BLANC
+    SORTIE
+        C ann sort
+    VOTE
+        D pol a voté
+T = 23
+T = 24
+T = 25
+    DÉCHARGE
+        X nel sort
+    ENTRÉE
+        Y rik entre
+    DÉCHARGE
+        Y rik entre
+        Y rik prend D pol
+        Y rik prend X nel
+        Y rik prend BLANC
+    ISOLOIRS
+        F bul sort
+        X nel entre
+        X nel choisit BLANC
+T = 26
+    SORTIE
+        D pol sort
+    VOTE
+        E lam a voté
+T = 27
+T = 28
+    DÉCHARGE
+        Y rik sort
+    ENTRÉE
+        Z pat entre
+    DÉCHARGE
+        Z pat entre
+        Z pat prend A bic
+        Z pat prend X nel
+        Z pat prend BLANC
+    ISOLOIRS
+        G yap sort
+        Y rik entre
+        Y rik choisit BLANC
+T = 29
+T = 30
+    SORTIE
+        E lam sort
+    VOTE
+        F bul a voté
+T = 31
+    DÉCHARGE
+        Z pat sort
+    ISOLOIRS
+        X nel sort
+        Z pat entre
+        Z pat choisit A bic
+T = 32
+T = 33
+T = 34
+    ISOLOIRS
+        Y rik sort
+    SORTIE
+        F bul sort
+    VOTE
+        G yap a voté
+T = 35
+T = 36
+T = 37
+    ISOLOIRS
+        Z pat sort
+T = 38
+    SORTIE
+        G yap sort
+    VOTE
+        X nel a voté
+T = 39
+T = 40
+    FERMETURE ENTRÉE
+T = 41
+T = 42
+    SORTIE
+        X nel sort
+    VOTE
+        Y rik a voté
+T = 43
+T = 44
+T = 45
+T = 46
+    SORTIE
+        Y rik sort
+    VOTE
+        Z pat a voté
+T = 47
+T = 48
+T = 49
+T = 50
+    SORTIE
+        Z pat sort
+
+BUREAU n°266 : RESULTATS Euro 2024
+PRESIDENT : C ann
+    nb electeurs : 10
+    nb votes : 10
+    participation : 100.00 %
+    abstention : 0.00 %
+    A bic : 1 (10.00 %)
+    D pol : 1 (10.00 %)
+    X nel : 3 (30.00 %)
+    blanc : 4 (40.00 %)
+    nul : 1 (10.00 %)
